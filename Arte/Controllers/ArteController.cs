@@ -9,7 +9,7 @@ namespace Arte.Controllers
     [ApiController]
     public class ArteController : Controller
     {
-        private string conString = "Server=10.1.1.215;Username=postgres;Database=Eduarda;Port=15432;Password=formacao;SSLMode=Prefer";
+        private string conString = "Host=localhost;Port=5432;Database=BancoArte;Username=postgres;Password=398201;";
 
         [HttpGet]
         public IActionResult ListArt()
@@ -31,7 +31,7 @@ namespace Arte.Controllers
                             Id = leitor.GetInt32(0),
                             Nome_Quadro = leitor.GetString(1),
                             Nome_Pintor = leitor.GetString(2),
-                            Ano_Quadro = leitor.GetDateTime(3),
+                            Ano_Quadro = leitor.GetString(3),
                             Valor = leitor.GetDecimal(4)
                         };
 
